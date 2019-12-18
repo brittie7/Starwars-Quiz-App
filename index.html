@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Starwars Quiz App">
+    <meta name="keywords" content="Starwars, trivia, quiz">
+    <meta name="author" content="Brittany Coleman">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Starwars Trivia</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <form class="wireframe1" action="/some-server-endpoint" method ="post">
+        <h1>Star Wars Trivia</h1>
+        <div class=titleImage><img src="/img/Starwars Trivia.jpg"></div>
+        <button type="button">Start Quiz</button> 
+    </form>
+        
+    <form class="wireframe2" action="/some-server-endpoint" method ="post">
+        <h2 class= top questionRank>Question 1 of 2</h2>
+        <h2 class = top scoreValue> Score: 1/5</h2>
+                    <legend class="question">Who is Han Solo's most loyal friend?</legend>
+                    <input type="radio" name="q1" id="ans-1" value="0" checked>
+                    <label for="ans-1">Chewie</label>
+                    <br>
+                    <input type="radio" name=" q2" id="ans-2" value="1">
+                    <label for="ans-2">Luke</label>
+                    <br>
+                    <input type="radio" name="q3" id="ans-3" value="2">
+                    <label for="ans-3">Leia</label>
+                    <br>
+                    <input type="radio" name="q4" id="ans-4" value="3">
+                    <label for="ans-4">Obie Wan</label>
+            <button type="button">Next</button> 
+    </form>  
+
+    <form class="wireframe3" action="/some-server-endpoint" method ="post">
+        <h1>Star Wars Trivia</h1>
+        <div class=titleImage><img src="/img/Star Wars Only.jpg"></div>
+        <h2>Your Score: 5/5!</h2>
+        <button type="button">Restart Quiz</button> 
+    </form>
+</body>
+</html> 
