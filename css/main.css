@@ -1,19 +1,143 @@
 
-h1 {
-    text-align: center;
+body * {
+    box-sizing: border-box;
 }
 
+body {
+    background-color: black;
+    color: white;
+    font-family: "Roboto", helvetica, sans-serif;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: black;
+    text-shadow:
+		-1px -1px 0 yellow,
+		1px -1px 0 yellow,
+		-1px 1px 0 yellow,
+		1px 1px 0 yellow;
+    text-transform: uppercase;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+.quizStatusTracker {
+    list-style-type: none;
+    text-align: center;
+}
 button {
     display: block;
     margin-left: auto;
     margin-right: auto; 
+    height: 30px;
+    background-color: green;
+    color: white;
+    width: 100%;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+}
+
+button:hover {
+    background-color: red;
+}
+
+#start {
+    background-color: black;
+    border: none;
+    margin-bottom: 10px;
 }
 
 img {
-    width: 400px;
-    height: 300px;
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto; 
     border: solid white 2px;
 }
+
+.tempAnswer {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.rightAnswer {
+    font-size: 1.5em;
+    color: orange;
+}
+
+.wrongAnswer {
+    font-size: 1.5em;
+    color: brown;
+}
+.questions {
+    border: 1px solid white;
+}
+#trivia {
+    width: 100%;
+}
+
+#checkAnswer {
+    width: 100%;
+    height: 25px;
+    margin-top: 10px;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    background-color: green;
+    color: white;
+}
+.questionOnly {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.answerQuiz {
+    margin-top: 5px;
+}
+
+input[type="radio"]{
+    margin: 5px;
+  }
+
+  .displayUserStatus {
+      text-align: center;
+      padding: 10px;
+      text-transform: uppercase;
+      color: silver;
+    }
+
+    @media only screen and (max-width: 320px) {
+        body {
+            width: 200px;
+        }
+
+        img {
+            width: 100%
+            display: block;
+            margin-left: auto;
+            margin-right: auto; 
+            border: solid white 2px;
+        }
+
+        .tempAnswer {
+            width: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+    }
