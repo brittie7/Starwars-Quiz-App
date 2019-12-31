@@ -134,7 +134,7 @@ function answerWellYouHave() {
   console.log('`answerWellYouHave ran`')
   $('#trivia').hide()
   $('.displayUserStatus').html(
-    `<div class=tempAnswer><img src="/img/babyYoda-RightAnswer.jpeg" alt="Baby Yoda smiling" class="answerChecked">
+    `<div class=tempAnswer><img src="./img/babyYoda-RightAnswer.jpeg" alt="Baby Yoda smiling" class="answerChecked">
     <span class="rightAnswer">Answer Correctly You Have</span> <button type="button" id="next">Next</button></div>`
   )
   score++
@@ -156,7 +156,7 @@ function tryAgainYouMust() {
   console.log('`tryAgainYouMust ran`')
   $('#trivia').hide()
   $('.displayUserStatus').html(
-    `<div class=tempAnswer><img src="/img/babyYoda-WrongAnswer.jpeg" alt="Baby Yoda looking confused" class="answerChecked">
+    `<div class=tempAnswer><img src="./img/babyYoda-WrongAnswer.jpeg" alt="Baby Yoda looking confused" class="answerChecked">
     <p>So certain were you. Next time, closer you must look. The correct answer is:</p>
     <span class="wrongAnswer">${STORE.quizBank[currentQuestionIndex].answer}</span><button type="button" id="next">Next</button></div>`
   )
