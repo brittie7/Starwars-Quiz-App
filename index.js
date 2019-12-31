@@ -134,7 +134,7 @@ function answerWellYouHave() {
   console.log('`answerWellYouHave ran`')
   $('#trivia').hide()
   $('.displayUserStatus').html(
-    `<div class=tempAnswer><img src="/img/Baby Yoda -Right Answer.jpeg" alt="Baby Yoda smiling" class="answerChecked">
+    `<div class=tempAnswer><img src="/img/babyYoda-RightAnswer.jpeg" alt="Baby Yoda smiling" class="answerChecked">
     <span class="rightAnswer">Answer Correctly You Have</span> <button type="button" id="next">Next</button></div>`
   )
   score++
@@ -156,7 +156,7 @@ function tryAgainYouMust() {
   console.log('`tryAgainYouMust ran`')
   $('#trivia').hide()
   $('.displayUserStatus').html(
-    `<div class=tempAnswer><img src="/img/Baby Yoda - Wrong Answer.jpeg" alt="Baby Yoda looking confused" class="answerChecked">
+    `<div class=tempAnswer><img src="/img/babyYoda-WrongAnswer.jpeg" alt="Baby Yoda looking confused" class="answerChecked">
     <p>So certain were you. Next time, closer you must look. The correct answer is:</p>
     <span class="wrongAnswer">${STORE.quizBank[currentQuestionIndex].answer}</span><button type="button" id="next">Next</button></div>`
   )
@@ -185,17 +185,31 @@ function endQuiz() {
   console.log('`endQuiz ran`');
   $('.quizStatus').hide();
   $('.displayUserStatus').empty();
-  $('.displayUserStatus').html(`You got ${score} questions right`);
+  $('.displayUserStatus').html(`You got ${score} of ${quizLength} questions right`);
   $('#trivia').show();
   $('#trivia').empty();
-  $('#trivia').html(`<button type="button" id="start">Start New Quiz</button>`);
+  $('#trivia').html(`<button type="button" id="restart">Start New Quiz</button>`);
   resetQuiz()
 }
 
 function resetQuiz(){
   console.log('`resetQuiz ran`');
-  $('#start').on('click',function(event){
-    location.reload();
+  $('#restart').on('click',function(event){
+    score = 0;
+    currentQuestionIndex = 0;
+    $('.score').text(score)
+    $(this).hide();
+    $('.displayUserStatus').empty();
+    $('#trivia').html(`<div class="questions"></div>`);
+    $('.quizStatus').show();
+    //displayQuizStatus();
+    newQuestion();
+    createSubmitButton();
+    
+
+
+    
+    //location.reload();
     //restartQuiz();
   })
 }
