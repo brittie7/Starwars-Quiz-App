@@ -30,6 +30,8 @@ h1 {
     text-transform: uppercase;
 }
 
+main { 
+    background-color: black}
 
 ul {
     padding-inline-start: 0px;

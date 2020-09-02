@@ -117,6 +117,16 @@ function submitAnswer() {
   });
 }
 
+function continueQuiz() {
+  $("#next").on("click", function (event) {
+    if (currentQuestionIndex + 1 === quizLength) {
+      endQuiz();
+    } else {
+      nextQuestion();
+    }
+  });
+};
+
 function answerWellYouHave() {
   console.log("`answerWellYouHave ran`");
   $("#trivia").hide();
@@ -127,13 +137,8 @@ function answerWellYouHave() {
   score++;
   $(".score").text(score);
 
-  $("#next").on("click", function (event) {
-    if (currentQuestionIndex + 1 === quizLength) {
-      endQuiz();
-    } else {
-      nextQuestion();
-    }
-  });
+  continueQuiz()
+
   //update the score
   //$('#trivia')
 }
@@ -146,13 +151,7 @@ function tryAgainYouMust() {
     <p>So certain were you. Next time, closer you must look. The correct answer is:</p>
     <span class="wrongAnswer">${STORE.quizBank[currentQuestionIndex].answer}</span><button type="button" id="next">Next</button></div>`
   );
-  $("#next").on("click", function (event) {
-    if (currentQuestionIndex + 1 === quizLength) {
-      endQuiz();
-    } else {
-      nextQuestion();
-    }
-  });
+  continueQuiz()
   //Go to next question function
 }
 
